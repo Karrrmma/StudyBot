@@ -1,0 +1,106 @@
+Prompt,Notes,text
+What is a (Neural Network) NN?,"Single neuron == linear regression
+RELU stands for rectified linear unit is the most popular activation function right now that makes deep NNs train faster now.
+Hidden layers predicts connection between inputs automatically, thats what deep learning is good at.
+Deep NN consists of more hidden layers (Deeper layers)
+Each Input will be connected to the hidden layer and the NN will decide the connections.
+Supervised learning means we have the (X,Y) and we need to get the function that maps X to Y.","What is a (Neural Network) NN? Single neuron == linear regression
+RELU stands for rectified linear unit is the most popular activation function right now that makes deep NNs train faster now.
+Hidden layers predicts connection between inputs automatically, thats what deep learning is good at.
+Deep NN consists of more hidden layers (Deeper layers)
+Each Input will be connected to the hidden layer and the NN will decide the connections.
+Supervised learning means we have the (X,Y) and we need to get the function that maps X to Y."
+Supervised learning with neural networks,"Different types of neural networks for supervised learning which includes:
+CNN or convolutional neural networks (Useful in computer vision)
+RNN or Recurrent neural networks (Useful in Speech recognition or NLP)
+Standard NN (Useful for Structured data)
+Hybrid/custom NN or a Collection of NNs types","Supervised learning with neural networks Different types of neural networks for supervised learning which includes:
+CNN or convolutional neural networks (Useful in computer vision)
+RNN or Recurrent neural networks (Useful in Speech recognition or NLP)
+Standard NN (Useful for Structured data)
+Hybrid/custom NN or a Collection of NNs types"
+"Why is deep learning taking off?
+","Deep learning is taking off for 3 reasons:
+Data:
+Using this image we can conclude:
+
+For small data NN can perform as Linear regression or SVM (Support vector machine)
+For big data a small NN is better that SVM
+For big data a big NN is better that a medium NN is better that small NN.
+Hopefully we have a lot of data because the world is using the computer a little bit more
+Mobiles
+IOT (Internet of things)
+Computation:
+GPUs.
+Powerful CPUs.
+Distributed computing.
+ASICs
+Algorithm:
+Creative algorithms has appeared that changed the way NN works.
+For example using RELU function is so much better than using SIGMOID function in training a NN because it helps with the vanishing gradient problem.","Why is deep learning taking off?
+ Deep learning is taking off for 3 reasons:
+Data:
+Using this image we can conclude:
+
+For small data NN can perform as Linear regression or SVM (Support vector machine)
+For big data a small NN is better that SVM
+For big data a big NN is better that a medium NN is better that small NN.
+Hopefully we have a lot of data because the world is using the computer a little bit more
+Mobiles
+IOT (Internet of things)
+Computation:
+GPUs.
+Powerful CPUs.
+Distributed computing.
+ASICs
+Algorithm:
+Creative algorithms has appeared that changed the way NN works.
+For example using RELU function is so much better than using SIGMOID function in training a NN because it helps with the vanishing gradient problem."
+Logistic regression cost function,"First loss function would be the square root error: L(y',y) = 1/2 (y' - y)^2
+But we won't use this notation because it leads us to optimization problem which is non convex, means it contains local optimum points.
+This is the function that we will use: L(y',y) = - (y*log(y') + (1-y)*log(1-y'))
+To explain the last function lets see:
+if y = 1 ==> L(y',1) = -log(y') ==> we want y' to be the largest ==> y' biggest value is 1
+if y = 0 ==> L(y',0) = -log(1-y') ==> we want 1-y' to be the largest ==> y' to be smaller as possible because it can only has 1 value.
+Then the Cost function will be: J(w,b) = (1/m) * Sum(L(y'[i],y[i]))
+The loss function computes the error for a single training example; the cost function is the average of the loss functions of the entire training set.","Logistic regression cost function First loss function would be the square root error: L(y',y) = 1/2 (y' - y)^2
+But we won't use this notation because it leads us to optimization problem which is non convex, means it contains local optimum points.
+This is the function that we will use: L(y',y) = - (y*log(y') + (1-y)*log(1-y'))
+To explain the last function lets see:
+if y = 1 ==> L(y',1) = -log(y') ==> we want y' to be the largest ==> y' biggest value is 1
+if y = 0 ==> L(y',0) = -log(1-y') ==> we want 1-y' to be the largest ==> y' to be smaller as possible because it can only has 1 value.
+Then the Cost function will be: J(w,b) = (1/m) * Sum(L(y'[i],y[i]))
+The loss function computes the error for a single training example; the cost function is the average of the loss functions of the entire training set."
+"Gradient Descent
+","We want to predict w and b that minimize the cost function.
+
+Our cost function is convex.
+
+First we initialize w and b to 0,0 or initialize them to a random value in the convex function and then try to improve the values the reach minimum value.
+
+In Logistic regression people always use 0,0 instead of random.
+
+The gradient decent algorithm repeats: w = w - alpha * dw where alpha is the learning rate and dw is the derivative of w (Change to w) The derivative is also the slope of w
+
+Looks like greedy algorithms. the derivative give us the direction to improve our parameters.
+
+The actual equations we will implement:
+
+w = w - alpha * d(J(w,b) / dw) (how much the function slopes in the w direction)
+b = b - alpha * d(J(w,b) / db) (how much the function slopes in the d direction)","Gradient Descent
+ We want to predict w and b that minimize the cost function.
+
+Our cost function is convex.
+
+First we initialize w and b to 0,0 or initialize them to a random value in the convex function and then try to improve the values the reach minimum value.
+
+In Logistic regression people always use 0,0 instead of random.
+
+The gradient decent algorithm repeats: w = w - alpha * dw where alpha is the learning rate and dw is the derivative of w (Change to w) The derivative is also the slope of w
+
+Looks like greedy algorithms. the derivative give us the direction to improve our parameters.
+
+The actual equations we will implement:
+
+w = w - alpha * d(J(w,b) / dw) (how much the function slopes in the w direction)
+b = b - alpha * d(J(w,b) / db) (how much the function slopes in the d direction)"
